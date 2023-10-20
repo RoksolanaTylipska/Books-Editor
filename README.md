@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Book List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Book List is a web application for managing a list of books in a CRUD fashion with a REST architecture.
 
-## Available Scripts
+## Technical Requirements
 
-In the project directory, you can run:
+- used the latest version of React;
+- used hooks (where necessary);
+- used Typescript, 
+- used only functional components;
+- usad of Context;
+- used CSS frameworks;
+- avoided using third-party packages (like Redux, mobX, axios, formik, yup, react-hook-form etc.);
+
+## Getting Started
+
+To run this project on your local machine, follow these steps:
+
+1. Clone this repository to your computer:
+
+### `git clone insert_repository_link_here`
+
+2. Install the required dependencies using npm:
+
+### `npm install`
+
+3. Start the application. The application will be accessible in your web browser at http://localhost:3000.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application has two main pages: Dashboard and Add a Book/Edit a Book.
 
-### `npm test`
+### Dashboard (Information Panel):
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  On this page, you'll see a table of books with the following columns:
+- Book Title
+- Author Name
+- Category
+- International Standard Book Number (ISBN)
+- Created At (date and time following the format "12 March 2022, 8:35 AM")
+- Modified/Edited At (date and time following the format "13 March 2022, 1:48 PM")
 
-### `npm run build`
+  In the "Actions" column, there are three different buttons:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Edit: Redirects to the book edit page with pre-filled fields.
+- Delete: Only available for deactivated records, removes the book from the database and the list.
+- Deactivate/Reactivate: Highlights the record as deactivated or reactivated. Also marks the record as deactivated in the database.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  Above the table is a filter/dropdown where the user can select one of the following options:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Show All (default)
+- Show Active
+- Show Deactivated
 
-### `npm run eject`
+There is also a link to the "Add a Book" page on this page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Add a Book/Edit a Book. Functionality:
+  This page features a form with the following fields:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Book Title (text, required)
+- Author Name (text, required)
+- Category (select with a few dummy options, required)
+- International Standard Book Number (ISBN) (number, required)
+- The form has a "Submit" button, which can either be "Add a Book" or "Edit Book" based on the user's action. There is also a link to the "Dashboard" page on this page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
